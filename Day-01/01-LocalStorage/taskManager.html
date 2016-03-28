@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task Manager</title>
+	<style>
+	h1{
+		padding : 5px;
+		border-top: 1px solid blue;
+		border-bottom: 1px solid blue;
+		background-color: lightblue;
+	}
+	.completed{
+		color : red;
+		text-decoration: line-through;
+		font-style: italic;
+		font-weight: bold;
+	}
+	li{
+		cursor: pointer;
+	}
+	</style>
+	<script type="text/usecase">
+		1. Load the tasks and list
+		2. Add a new task
+		3. Toggle the completion status
+		4. Remove completed tasks
+		5. Keep the app in sync with the storage across browser instances (same browser)
+	</script>
+</head>
+<body>
+	<h1>Task Manager</h1>
+	<hr>
+	<div class="content">
+		<label for="">Task :</label>
+		<input type="text" name="" id="txtTask">
+		<input type="button" value="Add Task" id="btnAddTask">
+		<input type="button" value="Remove Completed" id="btnRemoveCompleted">
+		<ol id="olTaskList">
+			<li class="completed">This is a completed task</li>
+			<li>This is an open task</li>
+		</ol>
+	</div>
+</body>
+</html>
