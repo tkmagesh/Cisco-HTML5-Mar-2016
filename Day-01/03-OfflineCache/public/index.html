@@ -13,9 +13,17 @@
 		5. Keep the app in sync with the storage across browser instances (same browser)
 	</script>
 	<script src="script.js"></script>
+	<script>
+		applicationCache.onupdateready = function(){
+			var response = window.confirm("A new version of the app is available. Do you want to use it?");
+			if (response){
+				window.location.reload();
+			}	
+		}
+	</script>
 </head>
 <body>
-	<h1>Task Manager</h1>
+	<h1>Task Manager - Ver 4.0</h1>
 	<hr>
 	<div class="content">
 		<label for="">Task :</label>
@@ -26,5 +34,7 @@
 			
 		</ol>
 	</div>
+	<hr>
+	<b><i>Copyright - Cisco-2016</i></b>
 </body>
 </html>
