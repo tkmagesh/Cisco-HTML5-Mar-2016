@@ -1,0 +1,17 @@
+HTML5 Features
+==============
+1. Local Storage
+2. Session Storage
+3. IndexedDb
+4. Offline Application Cache
+5. Server Worker
+6. Web Workers
+7. Server Sent Events
+8. Web Sockets
+9. New Input Types
+10. Geolocations API
+11. Notifications API
+12. New HTML Elements
+13. Audio
+14. Video
+15. Canvas
