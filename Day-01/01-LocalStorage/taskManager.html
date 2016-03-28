@@ -32,7 +32,8 @@
 		var txtTask, olTaskList;
 		var maxTaskId = 0;
 		var storage = window.localStorage;
-
+		window.onstorage = loadTasksFromStorage;
+		
 		function init(){
 			var btnAddTask = document.getElementById("btnAddTask");
 			btnAddTask.addEventListener("click", onBtnAddTaskClick);
@@ -47,6 +48,7 @@
 		}
 
 		function loadTasksFromStorage(){
+			olTaskList.innerHTML = '';
 			for(var i=0; i<storage.length; i++){
 				var task = JSON.parse(storage.getItem(storage.key(i)));
 				addTaskToList(task);
