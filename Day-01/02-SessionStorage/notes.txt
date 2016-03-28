@@ -1,0 +1,18 @@
+API - window.sessionStorage
+Key/Value store
+Values must be strings
+Key must be unique
+Same Origin Policy
+10MB storage limit per origin
+
+Methods
+	- setItem(key, value)
+	- getItem(key) //=> value
+	- removeItem(key)
+	- key(index) //=> key at index
+	- clear()
+Attributes
+	- length
+
+Note:
+The data persisted will be lost once the browser is shutdown
