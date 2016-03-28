@@ -1,0 +1,12 @@
+CACHE MANIFEST
+#VER 1.0
+
+CACHE:
+script.js
+style.css
+
+NETWORK:
+*
+
+FALLBACK:
+style-online.css 	style-offline.css

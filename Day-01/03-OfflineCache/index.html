@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" manifest="app.manifest">
+<head>
+	<meta charset="UTF-8">
+	<title>Task Manager</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-online.css">
+	<script type="text/usecase">
+		1. Load the tasks and list
+		2. Add a new task
+		3. Toggle the completion status
+		4. Remove completed tasks
+		5. Keep the app in sync with the storage across browser instances (same browser)
+	</script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<h1>Task Manager</h1>
+	<hr>
+	<div class="content">
+		<label for="">Task :</label>
+		<input type="text" name="" id="txtTask">
+		<input type="button" value="Add Task" id="btnAddTask">
+		<input type="button" value="Remove Completed" id="btnRemoveCompleted">
+		<ol id="olTaskList">
+			
+		</ol>
+	</div>
+</body>
+</html>

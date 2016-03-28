@@ -1,0 +1,9 @@
+h1{
+	border-top-color : red;
+	border-bottom-color: red;
+	background-color: lightpink;
+}
+
+#btnRemoveCompleted{
+	display : none;
+}
