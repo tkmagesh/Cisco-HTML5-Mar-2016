@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		window.addEventListener("DOMContentLoaded", init);
+		var worker = null;
+
+		function init(){
+			var btnDoWork = document.getElementById("btnDoWork");
+			btnDoWork.addEventListener("click", onBtnDoWorkClick);
+
+			worker = new Worker("complexWork.js");
+			worker.addEventListener("message", onWorkerMessage)
+		}
+		function onBtnDoWorkClick(){
+			displayMessage("Work Started");
+			worker.postMessage("start");
+			
+		}
+		function onWorkerMessage(evtArg){
+			var msg = evtArg.data;
+			if (msg.type === 'completed'){
+				displayMessage("Work Completed");
+				document.getElementById("workProgress").value = 100;
+			} else if (msg.type === 'progress'){
+				document.getElementById("workProgress").value = msg.percentCompleted;
+			} else {
+				console.log('unknown message frm worker - ', msg);
+			}
+		}
+		function displayMessage(msg){
+			document.getElementById("divMessages").innerHTML += msg + "<br/>";
+		}
+
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="">
+	<input type="button" value="Do Work" id="btnDoWork">
+	<div>
+		<progress id="workProgress" min="0" max="100" value="0"></progress>
+	</div>
+	<div id="divMessages"></div>
+</body>
+</html>
