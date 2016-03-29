@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Server Sent Events Demo</title>
+	<script>
+		window.addEventListener("DOMContentLoaded", init);
+		function init(){
+			var btnGetTime = document.getElementById("btnGetTime");
+			//btnGetTime.addEventListener("click", onBtnGetTimeClick);
+			onBtnGetTimeClick()
+		}
+		var evtSrc = null;
+		function onBtnGetTimeClick(){
+			evtSrc = new EventSource('./time');
+			evtSrc.addEventListener("time", onTimeEvent);
+			evtSrc.addEventListener('fileChange', onFileChangeEvent);
+		}
+		function onTimeEvent(evtArg){
+			document.getElementById("divMessages").innerHTML += evtArg.data + "</br>";
+		}
+		function onFileChangeEvent(){
+			window.location.reload();
+		}
+	</script>
+</head>
+<body>
+	<h1>Server Sent Events - Ver 2.3</h1>
+	<hr>
+	<!-- <input type="button" value="Get Time" id="btnGetTime"> -->
+	<div id="divMessages"></div>
+</body>
+</html>

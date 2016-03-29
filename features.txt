@@ -1,11 +1,11 @@
 HTML5 Features
 ==============
-1. Local Storage
-2. Session Storage
+1. Local Storage (done)
+2. Session Storage (done)
 3. IndexedDb
-4. Offline Application Cache
+4. Offline Application Cache (done)
 5. Server Worker
-6. Web Workers
+6. Web Workers (done)
 7. Server Sent Events
 8. Web Sockets
 9. New Input Types
