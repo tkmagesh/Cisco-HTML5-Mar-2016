@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Notifications</title>
+	<script>
+		window.addEventListener("DOMContentLoaded", init);
+		function init(){
+			var btnShow = document.getElementById("btnShow");
+			btnShow.addEventListener("click", onBtnShowClick);
+		}
+
+		function onBtnShowClick(){
+			Notification.requestPermission(function(permission){
+				if (permission === 'granted'){
+					new Notification("Time", {
+						icon : 'accept.png',
+						body : 'current time is ' + new Date() + ''
+					});
+				}
+			});
+		}
+
+	</script>
+</head>
+<body>
+	<input type="button" value="Show Notification" id="btnShow">
+</body>
+</html>

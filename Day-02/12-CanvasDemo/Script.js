@@ -23,7 +23,8 @@ function doGradients() {
     canvas = elem.getContext('2d');
     var grad = canvas.createLinearGradient(10, 10,200, 200);
 	grad.addColorStop(0, '#FF0000');
-    grad.addColorStop(0.5, '#0000FF');
+    grad.addColorStop(0.3, 'yellow');
+    grad.addColorStop(0.6, 'blue');
     grad.addColorStop(1, '#000000');
     canvas.fillStyle = grad;
     //canvas.fillRect(10, 10, 100, 100);
