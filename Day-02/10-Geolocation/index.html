@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+    (function(){
+        window.addEventListener("DOMContentLoaded", init);
+        function init(){
+            var btnGetLocation = document.getElementById("btnGetLocation");
+            btnGetLocation.addEventListener("click", getLocation);
+        }
+        function getLocation(){
+            window.navigator.geolocation.getCurrentPosition(function(pos){
+                var coordinates = pos.coords;
+                var msg = 'latitude: ' + coordinates.latitude + ' longitude: ' + coordinates.longitude;
+                document.getElementById("divMessages").innerHTML = msg;
+            });
+        }
+    })();
+    </script>
+</head>
+<body>
+    <input type="button" value="Get Location" id="btnGetLocation">
+    <div id="divMessages"></div>
+</body>
+</html>

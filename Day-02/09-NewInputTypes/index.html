@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input{
+            display: block;
+        }
+    </style>
+    <script type="text/javascript">
+    function isInputTypeSupported(typ){
+        var input = document.createElement("input");
+        input.setAttribute("type", typ);
+        return input.type === typ;
+    }
+    </script>
+</head>
+<body>
+   <form action="">
+    <input type="text" name="" id="">
+    <input type="number" name="" id="">
+    <input type="range" name="" id="">
+    <input type="color" name="" id="">
+    <input type="date" name="" id="">
+    <input type="time" name="" id="">
+    <input type="datetime-local" name="" id="">
+    <input type="email" name="" id="" required>
+    <input type="url" name="" id="" required>
+    <input type="tel" name="" id="" required>
+    <input type="search" name="" id="">
+    <input type="submit" value="Save">
+    </form>
+</body>
+</html>

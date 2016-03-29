@@ -6,8 +6,8 @@ HTML5 Features
 4. Offline Application Cache (done)
 5. Server Worker
 6. Web Workers (done)
-7. Server Sent Events
-8. Web Sockets
+7. Server Sent Events (done)
+8. Web Sockets (done)
 9. New Input Types
 10. Geolocations API
 11. Notifications API
